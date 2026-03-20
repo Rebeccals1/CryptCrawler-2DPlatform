@@ -99,18 +99,8 @@ Assets/
 ## Extension Features Implemented
 
 - ✅ Enemy knockback on hit
-- ✅ Score system scaffold (GameSession.AddScore)
 
 ---
 
-## 🪞 Reflection
-
-**Prototype goal:** Build a functional 2D dungeon platformer with combat and enemy AI.
-
-**Biggest change from prototype:** Switched from a projectile shooting system to melee combat — felt more appropriate for the dungeon aesthetic and skeleton enemy type. The player state machine also evolved beyond a simple movement script into a fully modular architecture.
-
-**Most challenging thing:** Getting the skeleton animation system working — parameter naming, transition conditions, and event subscriptions all had to align perfectly across multiple scripts.
-
-**If I had one more week:** Add a boss enemy, checkpoint system, and additional enemy types with different behaviors.
 
 ---
