@@ -232,6 +232,7 @@
 
 ## Other Extensions:**
 |✅| 🟢 | Floating damage numbers |
+
 |✅| 🟢 | Enemy knockback on hit |
 
 **Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head and fades out over 0.8 seconds using a World Space Canvas. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods for future score UI integration.
