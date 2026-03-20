@@ -230,7 +230,9 @@
 | | 🔴 | ~~Multiple levels (3+) with scene transitions~~ |
 | | 🔴 | ~~Save system (high score persists between sessions)~~ |
 
-**Extension chosen:** Enemy knockback on hit
+## Other Extensions:**
+|✅| 🟢 | Floating damage numbers |
+|✅| 🟢 | Enemy knockback on hit |
 
 **Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head and fades out over 0.8 seconds using a World Space Canvas. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods for future score UI integration.
 
@@ -250,28 +252,5 @@
 **GitHub Repository:** https://github.com/Rebeccals1/CryptCrawler-2DPlatform
 
 ---
-
-## 🪞 Reflection Questions
-
-**1. What was your rapid prototype goal for this project?**
-
-I wanted to keep it simple. My goal was to build a functional 2D dungeon platformer with a player that could move, jump, and engage in melee combat with skeleton enemies patrolling a hand-crafted crypt level. I wanted to create a complete game loop from a start screen through to a win condition with a lives system.
-
-**2. How closely did your final game match your original prototype vision? What changed and why?**
-
-The final game was fairly close to my original vision. The main change was switching from a projectile shooting system to melee combat, which felt more appropriate for the dark dungeon aesthetic and the skeleton enemy type. The player state machine also evolved beyond what I originally planned, ending up more structured and scalable than a simple movement script. I used a full state machine pattern with separate classes for each state.
-
-**3. What is the most technically challenging thing you implemented? How did you solve it?**
-
-The most challenging part was getting the player and skeleton animation systems working correctly. The Animator controller required precise parameter naming, correct transition conditions and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by debugging each layer. I had to make sure the parameter names matched the code, check to make sure any State transitions had conditions set and using Debug.Log to trace exactly where the event chain was breaking.
-
-**4. If you had one more week, what would you add or change?**
-
-I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death and maybe implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
-
-**5. How does your approach to game development now compare to when you started the course?**
-
-I now think much more systematically about separating concerns. Like having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging rather than guessing and I understand the importance of checking Inspector field assignments before assuming code is broken.
-
 
 *CryptCrawler Checklist | CS 4700: Game Design Studio | Unity 6 + C# | Rebecca | March 2026*
