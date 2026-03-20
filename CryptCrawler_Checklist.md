@@ -255,41 +255,23 @@
 
 **1. What was your rapid prototype goal for this project?**
 
-My goal was to build a functional 2D dungeon platformer with a player that could move, jump, and engage in melee combat with skeleton enemies patrolling a hand-crafted crypt level. I wanted to create a complete game loop from a start screen through to a win condition, with meaningful stakes through a lives system.
+I wanted to keep it simple. My goal was to build a functional 2D dungeon platformer with a player that could move, jump, and engage in melee combat with skeleton enemies patrolling a hand-crafted crypt level. I wanted to create a complete game loop from a start screen through to a win condition with a lives system.
 
 **2. How closely did your final game match your original prototype vision? What changed and why?**
 
-The final game was fairly close to my original vision. The main change was switching from a projectile shooting system to melee combat, which felt more appropriate for the dark dungeon aesthetic and the skeleton enemy type. The player state machine also evolved beyond what I originally planned, ending up more structured and scalable than a simple movement script — using a full state machine pattern with separate classes for each state.
+The final game was fairly close to my original vision. The main change was switching from a projectile shooting system to melee combat, which felt more appropriate for the dark dungeon aesthetic and the skeleton enemy type. The player state machine also evolved beyond what I originally planned, ending up more structured and scalable than a simple movement script. I used a full state machine pattern with separate classes for each state.
 
 **3. What is the most technically challenging thing you implemented? How did you solve it?**
 
-The most challenging part was getting the skeleton animation system working correctly. The Animator controller required precise parameter naming, correct transition conditions, and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by methodically debugging each layer — checking parameter names matched the code, ensuring Any State transitions had conditions set, and using Debug.Log to trace exactly where the event chain was breaking.
+The most challenging part was getting the player and skeleton animation systems working correctly. The Animator controller required precise parameter naming, correct transition conditions and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by debugging each layer. I had to make sure the parameter names matched the code, check to make sure any State transitions had conditions set and using Debug.Log to trace exactly where the event chain was breaking.
 
 **4. If you had one more week, what would you add or change?**
 
-I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death, and implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
+I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death and maybe implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
 
 **5. How does your approach to game development now compare to when you started the course?**
 
-I now think much more systematically about separating concerns — having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging methodically rather than guessing, and I understand the importance of checking Inspector field assignments before assuming code is broken.
+I now think much more systematically about separating concerns. Like having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging rather than guessing and I understand the importance of checking Inspector field assignments before assuming code is broken.
 
----
-
-## 🆘 Stuck? Try These Steps
-
-**Before asking for help:**
-1. ☐ Read the **error message** in Console carefully — it tells you the file and line number
-2. ☐ Check the **Inspector** — is every serialized field assigned?
-3. ☐ Check **Tags and Layers** — are layers set correctly?
-4. ☐ Checked the **Layer Collision Matrix**?
-5. ☐ Searched the error message in the Unity Docs or Discord?
-6. ☐ Tried rubber-duck debugging (explain the code out loud line by line)?
-
-**If still stuck:** Post in Discord with:
-- Screenshot of the **Console error**
-- Screenshot of the **Inspector** for the relevant GameObject
-- The **script** causing the issue
-
----
 
 *CryptCrawler Checklist | CS 4700: Game Design Studio | Unity 6 + C# | Rebecca | March 2026*
