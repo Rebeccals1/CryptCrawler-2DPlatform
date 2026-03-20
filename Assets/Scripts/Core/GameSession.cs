@@ -1,0 +1,60 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameSession : MonoBehaviour
+{
+    // ─── Singleton ───────────────────────────────────────────────────────
+    public static GameSession Instance { get; private set; }
+
+    // ─── State ───────────────────────────────────────────────────────────
+    [SerializeField] int lives = 3;
+    int score = 0;
+
+    void Awake()
+    {
+        // Singleton pattern — one GameSession persists across scenes
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    // ─── Score ───────────────────────────────────────────────────────────
+    public void AddScore(int points)
+    {
+        score += points;
+        // TODO: Update score UI
+    }
+
+    public int GetScore() => score;
+
+    // ─── Lives ───────────────────────────────────────────────────────────
+    public void ProcessPlayerDeath()
+    {
+        lives--;
+        if (lives > 0)
+            ReloadCurrentScene();
+        else
+            LoadGameOver();
+    }
+
+    // ─── Scene Loading ───────────────────────────────────────────────────
+    void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void LoadGameOver()
+    {
+        Destroy(gameObject);  // Reset session
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene("Win");
+    }
+}
