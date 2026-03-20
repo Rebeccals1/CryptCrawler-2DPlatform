@@ -181,11 +181,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Background music loops on AudioSource |
+|  X  | | ~~Background music loops on AudioSource~~ |
 | ✅ | | Jump SFX plays when player jumps |
-| ✅ | | Shoot SFX plays when player fires |
+| X | | ~~Shoot SFX plays when player fires~~ |
 | ✅ | | Damage SFX plays when player is hit |
-| ✅ | | At least 1 particle effect (death, hit, collect, etc.) |
+| X | | ~~At least 1 particle effect (death, hit, collect, etc.)~~ |
 
 **Section Notes:** AudioManager singleton with separate music and SFX AudioSources. Music: simplesound-scary-cinematic-background3.mp3. Jump: action_jump.mp3. Attack/Shoot: sword-slash.mp3 (PlayHit() called in PlayerAttackState). Death: female-character-death-vocal.mp3. Death particles instantiated at player position on death.
 
@@ -209,7 +209,7 @@
 |:---:|---|
 | ✅ | Level has a clear start and end |
 | ✅ | Level has varied terrain (high platforms, low areas, gaps) |
-| ✅ | Difficulty ramps up through the level |
+| x | ~~Difficulty ramps up through the level~~ |
 | ✅ | Player can distinguish hazards from safe ground visually |
 | ✅ | Game is playable start to finish without bugs |
 
@@ -219,18 +219,18 @@
 
 | ✅ | Difficulty | Feature |
 |:---:|:---:|---|
-| | 🟢 | Double jump |
-| | 🟢 | Animated collectible coins/gems |
-| | 🟢 | Multiple enemy types (reskins with different speeds) |
-| | 🟡 | Checkpoint system |
-| | 🟡 | Moving platform |
-| | 🟡 | Enemy with ranged attack |
-| | 🟡 | Score system with on-screen display |
-| | 🔴 | Boss enemy with health bar |
-| | 🔴 | Multiple levels (3+) with scene transitions |
-| | 🔴 | Save system (high score persists between sessions) |
+| | 🟢 | ~~Double jump~~ |
+| | 🟢 | ~~Animated collectible coins/gems~~ |
+| | 🟢 | ~~Multiple enemy types (reskins with different speeds)~~ |
+| | 🟡 | ~~Checkpoint system~~ |
+| | 🟡 | ~~Moving platform~~ |
+| | 🟡 | ~~Enemy with ranged attack~~ |
+| | 🟡 | ~~Score system with on-screen display~~ |
+| | 🔴 | ~~Boss enemy with health bar~~ |
+| | 🔴 | ~~Multiple levels (3+) with scene transitions~~ |
+| | 🔴 | ~~Save system (high score persists between sessions)~~ |
 
-**Extension chosen:** Floating damage numbers, enemy knockback on hit, score system scaffold
+**Extension chosen:** Enemy knockback on hit
 
 **Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head and fades out over 0.8 seconds using a World Space Canvas. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods for future score UI integration.
 
