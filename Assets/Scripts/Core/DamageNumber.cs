@@ -19,6 +19,7 @@ public class DamageNumber : MonoBehaviour
     public void SetValue(int amount)
     {
         text.text = amount.ToString();
+        Debug.Log("DamageNumber spawned at: " + transform.position + " value: " + amount);
     }
 
     void Update()

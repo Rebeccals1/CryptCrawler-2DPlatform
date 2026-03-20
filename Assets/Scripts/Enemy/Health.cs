@@ -49,7 +49,9 @@ public class Health : MonoBehaviour
     {
         if (damageNumberPrefab == null || worldCanvas == null) return;
         GameObject obj = Instantiate(damageNumberPrefab, worldCanvas.transform);
-        obj.transform.position = transform.position + Vector3.up * 1.5f;
+        
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 1.5f);
+        obj.GetComponent<RectTransform>().position = screenPos;
         obj.GetComponent<DamageNumber>().SetValue(amount);
     }
 
