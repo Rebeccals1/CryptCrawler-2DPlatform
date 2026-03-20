@@ -95,6 +95,18 @@ if (newDirection != FacingDirection) {
 }
 ```
 
+### Player Freeze on Death
+```csharp
+// In Player.OnDeath() — prevents falling through world
+public void OnDeath() {
+    isAlive = false;
+    Anim.SetTrigger("die");
+    Rb.linearVelocity = Vector2.zero;
+    Rb.bodyType = RigidbodyType2D.Kinematic;  // stops gravity
+    GetComponent<Collider2D>().enabled = false;
+}
+```
+
 ---
 
 ## ⚔️ Melee Combat
@@ -253,6 +265,16 @@ void Awake() {
 }
 ```
 
+### GameOverUI / WinUI — Safe Restart
+```csharp
+public void RestartGame() {
+    // Null check — GameSession may already be destroyed
+    GameSession session = FindFirstObjectByType<GameSession>();
+    if (session != null) Destroy(session.gameObject);
+    SceneManager.LoadScene("Level1");
+}
+```
+
 ---
 
 ## 📷 Camera Shake
@@ -272,16 +294,27 @@ CameraShake.Instance?.Shake(intensity: 2f, duration: 0.3f);
 ## 💥 Floating Damage Numbers
 
 ```csharp
-// Spawned automatically by Health.SpawnDamageNumber()
-// Requires: DamageNumber prefab + WorldCanvas assigned on Health component
+// Uses Screen Space Overlay Canvas + WorldToScreenPoint conversion
+// WorldCanvas: Render Mode = Screen Space Overlay, Scale = 1,1,1
 
 void SpawnDamageNumber(int amount) {
     if (damageNumberPrefab == null || worldCanvas == null) return;
     GameObject obj = Instantiate(damageNumberPrefab, worldCanvas.transform);
-    obj.transform.position = transform.position + Vector3.up * 1.5f;
+
+    // Convert enemy world position to screen position
+    Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 1.5f);
+    obj.GetComponent<RectTransform>().position = screenPos;
     obj.GetComponent<DamageNumber>().SetValue(amount);
 }
-// DamageNumber floats up at 1.5 units/sec, fades over 0.8s, then destroys
+
+// DamageNumber.Update() — moves in local space
+void Update() {
+    timer += Time.deltaTime;
+    transform.localPosition += Vector3.up * floatSpeed * Time.deltaTime;
+    text.color = new Color(startColor.r, startColor.g, startColor.b,
+                 Mathf.Lerp(1f, 0f, timer / lifetime));
+    if (timer >= lifetime) Destroy(gameObject);
+}
 ```
 
 ---
@@ -389,13 +422,16 @@ if (CanAttack) { nextAttackTime = Time.time + attackCooldown; Attack(); }
 | Health starts at 0 | Public field serialized as 0 in Inspector | Make `health` private, use `[SerializeField] private int maxHealth` |
 | Skeleton dies on spawn | Death animation is default Animator state | Right-click Skele_idle → Set as Layer Default State |
 | Player can move after death | isAlive not checked in Update | Add `if (!isAlive) return;` in Update and FixedUpdate |
-| isAlive starts false | Serialized bool defaulted to false | Add `= true` and right-click component → Reset |
+| isAlive starts false | Serialized bool defaulted to false | Make private with `= true`, right-click component → Reset |
+| Player falls through world on death | Rigidbody still Dynamic | Set `Rb.bodyType = RigidbodyType2D.Kinematic` in OnDeath() |
+| NullReferenceException on Play Again | GameSession already destroyed | Use null check: `if (session != null) Destroy(session.gameObject)` |
+| Damage numbers not visible | WorldCanvas wrong render mode | Set Canvas to Screen Space Overlay, use WorldToScreenPoint |
+| Damage numbers spawn off screen | Using world position directly | Use `Camera.main.WorldToScreenPoint()` to convert position |
 | NullReferenceException | Unassigned serialized field | Check Inspector — drag missing reference in |
 | Animation stuck | Has Exit Time checked | Uncheck Has Exit Time on movement transitions |
 | Camera jitter | Multiple cameras active | Disable Main Camera or set Cinemachine priority |
 | Sprite flicker (invincibility) | Correct — it's a feature! | Adjust flash speed: `Mathf.Sin(timer * 20f)` |
 | DontDestroyOnLoad duplicate | Two GameSessions exist | Singleton Awake() destroys extra instances |
-| Damage numbers not showing | DamageNumber prefab missing TMP | Ensure TextMeshProUGUI + DamageNumber.cs are on same object |
 | Scene doesn't load on death | GameSession not in scene | Add empty GameObject + GameSession.cs to Level1 |
 
 ---

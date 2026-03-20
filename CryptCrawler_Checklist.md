@@ -18,12 +18,12 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Created Unity 6 project with **2D URP** template |
-| ✅ | | Installed **Cinemachine** package |
-| ✅ | | Installed **2D Tilemap Extras** (for Rule Tiles) |
-| ✅ | | Created folder structure: Art/, Scripts/, Prefabs/, Audio/, Scenes/ |
-| ✅ | | Imported or created placeholder sprites |
-| ✅ | | Configured sprites: Filter Mode = Point, PPU = 16 |
+| [x] | | Created Unity 6 project with **2D URP** template |
+| [x] | | Installed **Cinemachine** package |
+| [x] | | Installed **2D Tilemap Extras** (for Rule Tiles) |
+| [x] | | Created folder structure: Art/, Scripts/, Prefabs/, Audio/, Scenes/ |
+| [x] | | Imported or created placeholder sprites |
+| [x] | | Configured sprites: Filter Mode = Point, PPU = 16 |
 
 **Section Notes:** All 6 complete. Aseprite used for pixel art sprites. Folder structure includes Animations/, Rules/, Tiles/ in addition to required folders.
 
@@ -33,14 +33,14 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Created `Grid` with at least 3 Tilemap children (Ground, Hazards, Background) |
-| ✅ | | Created a **Rule Tile** for the ground |
-| ✅ | | Added at least 5 rules to the Rule Tile (edges, corners, center) |
-| ✅ | | Painted a level with platforms, gaps, and elevation changes |
-| ✅ | | Added **Tilemap Collider 2D** to Ground |
-| ✅ | | Added **Composite Collider 2D** and enabled "Used By Composite" |
-| ✅ | | Hazard Tilemap has collider with **Is Trigger: true** |
-| ✅ | | Background Tilemap has Order in Layer = -1 |
+| [x] | | Created `Grid` with at least 3 Tilemap children (Ground, Hazards, Background) |
+| [x] | | Created a **Rule Tile** for the ground |
+| [x] | | Added at least 5 rules to the Rule Tile (edges, corners, center) |
+| [x] | | Painted a level with platforms, gaps, and elevation changes |
+| [x] | | Added **Tilemap Collider 2D** to Ground |
+| [x] | | Added **Composite Collider 2D** and enabled "Used By Composite" |
+| [x] | | Hazard Tilemap has collider with **Is Trigger: true** |
+| [x] | | Background Tilemap has Order in Layer = -1 |
 
 **Section Notes:** 6 Tilemap layers: Background, Platforms, Midground, Props, Doors, Blood (hazard). 3 Rule Tile assets: Platform.asset, Midground.asset, Midground2.asset. Rich tile set includes rock variants, blood-stained edges, skull tiles, brick dividers, logs, and wood.
 
@@ -50,14 +50,14 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Player has: SpriteRenderer, Rigidbody2D, CapsuleCollider2D, Animator |
-| ✅ | | Rigidbody2D: Collision Detection = Continuous, Freeze Rotation Z = true |
-| ✅ | | `PlayerMovement.cs` attached and compiles without errors |
-| ✅ | | `GroundCheck` child object created at bottom of player |
-| ✅ | | Player moves left/right with A/D or arrow keys |
-| ✅ | | Player jumps with Space and only when grounded |
-| ✅ | | Sprite flips direction when moving |
-| ✅ | | Better jump physics applied (fall feels snappy, tap = short jump) |
+| [x] | | Player has: SpriteRenderer, Rigidbody2D, CapsuleCollider2D, Animator |
+| [x] | | Rigidbody2D: Collision Detection = Continuous, Freeze Rotation Z = true |
+| [x] | | `PlayerMovement.cs` attached and compiles without errors |
+| [x] | | `GroundCheck` child object created at bottom of player |
+| [x] | | Player moves left/right with A/D or arrow keys |
+| [x] | | Player jumps with Space and only when grounded |
+| [x] | | Sprite flips direction when moving |
+| [x] | | Better jump physics applied (fall feels snappy, tap = short jump) |
 
 **Section Notes:** Implemented as a full state machine (PlayerIdleState, PlayerMoveState, PlayerJumpState, PlayerAttackState) rather than a single script. Uses Unity New Input System. Variable gravity with separate NormalGravity, FallGravity, JumpGravity values. Jump-cut multiplier (0.5) for variable jump height.
 
@@ -67,15 +67,15 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | `Player_Idle` animation clip created |
-| ✅ | | `Player_Run` animation clip created |
-| ✅ | | `Player_Jump` animation clip created |
-| ✅ | | `Player_Fall` animation clip created |
-| ✅ | | `Player_Death` animation clip created |
-| ✅ | | Animator parameters set: `isRunning`, `isGrounded`, `yVelocity`, `die` |
-| ✅ | | All transitions wired correctly (no floating states) |
-| ✅ | | "Has Exit Time" unchecked on all movement transitions |
-| ✅ | | Animations play correctly in Play Mode |
+| [x] | | `Player_Idle` animation clip created |
+| [x] | | `Player_Run` animation clip created |
+| [x] | | `Player_Jump` animation clip created |
+| [x] | | `Player_Fall` animation clip created |
+| [x] | | `Player_Death` animation clip created |
+| [x] | | Animator parameters set: `isRunning`, `isGrounded`, `yVelocity`, `die` |
+| [x] | | All transitions wired correctly (no floating states) |
+| [x] | | "Has Exit Time" unchecked on all movement transitions |
+| [x] | | Animations play correctly in Play Mode |
 
 **Section Notes:** 7 animation clips total: Idle, Run, Jump, Falling, Dead, Attack, Landing. Additional parameters: isIdle, isJumping, isAttacking for melee attack state. All state machine transitions verified in Play Mode.
 
@@ -85,11 +85,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Cinemachine Virtual Camera added to scene |
-| ✅ | | Camera follows player smoothly |
-| ✅ | | Camera confined to level bounds (CinemachineConfiner2D) |
-| ✅ | | Camera shake implemented in `CameraShake.cs` |
-| ✅ | | Camera shakes when player takes damage |
+| [x] | | Cinemachine Virtual Camera added to scene |
+| [x] | | Camera follows player smoothly |
+| [x] | | Camera confined to level bounds (CinemachineConfiner2D) |
+| [x] | | Camera shake implemented in `CameraShake.cs` |
+| [x] | | Camera shakes when player takes damage |
 
 **Section Notes:** CameraShake is a singleton on the Virtual Camera. Shake(2f, 0.3f) called from PlayerHealth.TakeDamage(). Uses CinemachineBasicMultiChannelPerlin for shake effect.
 
@@ -99,11 +99,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Created layers: Ground, Player, Enemy, Hazard, PlayerProjectile, EnemyProjectile |
-| ✅ | | Ground Tilemap assigned to Ground layer |
-| ✅ | | Player assigned to Player layer |
-| ✅ | | Layer Collision Matrix configured (PlayerProjectile ✗ Player, Enemy ✗ Enemy) |
-| ✅ | | PlayerMovement Ground Check uses correct layer mask |
+| [x] | | Created layers: Ground, Player, Enemy, Hazard, PlayerProjectile, EnemyProjectile |
+| [x] | | Ground Tilemap assigned to Ground layer |
+| [x] | | Player assigned to Player layer |
+| [x] | | Layer Collision Matrix configured (PlayerProjectile ✗ Player, Enemy ✗ Enemy) |
+| [x] | | PlayerMovement Ground Check uses correct layer mask |
 
 **Section Notes:** All 6 layers created. PlayerProjectile and EnemyProjectile layers exist in project but are not actively used since shooting was replaced with melee combat. GroundLayer LayerMask used in Player.cs CheckGrounded(). EnemyLayer LayerMask used in Combat.cs OverlapCircle.
 
@@ -113,15 +113,15 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Enemy prefab created with Rigidbody2D, CapsuleCollider2D, Animator |
-| ✅ | | Enemy assigned to Enemy layer |
-| ✅ | | `EnemyPatrol.cs` attached, enemy moves left and right |
-| ✅ | | Enemy turns at waypoint boundaries |
-| ✅ | | Enemy turns at ledges (no ground detected) |
-| ✅ | | Enemy sprite flips direction correctly |
-| ✅ | | `EnemyHurt.cs` — touching enemy damages player |
-| ✅ | | Enemy `Die()` plays animation and removes GameObject |
-| ✅ | | At least **2 enemies** placed in the level |
+| [x] | | Enemy prefab created with Rigidbody2D, CapsuleCollider2D, Animator |
+| [x] | | Enemy assigned to Enemy layer |
+| [x] | | `EnemyPatrol.cs` attached, enemy moves left and right |
+| [x] | | Enemy turns at waypoint boundaries |
+| [x] | | Enemy turns at ledges (no ground detected) |
+| [x] | | Enemy sprite flips direction correctly |
+| [x] | | `EnemyHurt.cs` — touching enemy damages player |
+| [x] | | Enemy `Die()` plays animation and removes GameObject |
+| [x] | | At least **2 enemies** placed in the level |
 
 **Section Notes:** 2 Skeleton enemies placed (Skeleton1, Skeleton2), each with their own LeftEdge/RightEdge waypoints and SkelGroundCheck child. TurnAround() has 0.2s cooldown to prevent vibration at edges. Enemy has full animation set: idle, walk, hit, death, attack. Health event system (OnDamaged, OnDeath) drives animation reactions. Enemies are prefabs in Assets/Prefabs/Skeleton.prefab.
 
@@ -131,18 +131,18 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | ~~Arrow prefab~~ → **Melee attack with OverlapCircle detection** |
-| ✅ | | ~~Arrow assigned to PlayerProjectile layer~~ → **EnemyLayer mask used for melee targeting** |
-| ✅ | | ~~`Arrow.cs`~~ → **`Combat.cs` handles attack direction** |
-| ✅ | | ~~Arrow destroys on hitting enemy~~ → **Enemy takes damage via Health.ChangeHealth()** |
-| ✅ | | ~~Arrow destroys on hitting ground~~ → **Attack radius confined to enemy layer only** |
-| ✅ | | ~~Arrow max lifetime~~ → **Attack cooldown (1.5s) prevents spam** |
-| ✅ | | ~~`PlayerShooter.cs`~~ → **`Combat.cs` fires on left-click (Fire1)** |
-| ✅ | | Fire rate limit prevents spam |
-| ✅ | | Attacks in the direction the player faces |
-| ✅ | | ~~`FirePoint`~~ → **`AttackPoint` child object positioned at sword tip** |
+| [x] | | ~~Arrow prefab~~ → **Melee attack with OverlapCircle detection** |
+| [x] | | ~~Arrow assigned to PlayerProjectile layer~~ → **EnemyLayer mask used for melee targeting** |
+| [x] | | ~~`Arrow.cs`~~ → **`Combat.cs` handles attack direction** |
+| [x] | | ~~Arrow destroys on hitting enemy~~ → **Enemy takes damage via Health.ChangeHealth()** |
+| [x] | | ~~Arrow destroys on hitting ground~~ → **Attack radius confined to enemy layer only** |
+| [x] | | ~~Arrow max lifetime~~ → **Attack cooldown (1.5s) prevents spam** |
+| [x] | | ~~`PlayerShooter.cs`~~ → **`Combat.cs` fires on left-click (Fire1)** |
+| [x] | | Fire rate limit prevents spam |
+| [x] | | Attacks in the direction the player faces |
+| [x] | | ~~`FirePoint`~~ → **`AttackPoint` child object positioned at sword tip** |
 
-**Section Notes:** Shooting replaced with melee sword combat using Physics2D.OverlapCircle on AttackPoint. This was an intentional design decision — melee combat fits the dark dungeon aesthetic and skeleton enemy type better than projectiles. Includes attack animation, sword-slash SFX, knockback force applied to enemies, and floating damage numbers. Attack cooldown = 1.5s. Damage = 100 (one-shots enemies).
+**Section Notes:** Shooting replaced with melee sword combat using Physics2D.OverlapCircle on AttackPoint. Intentional design decision — melee combat fits the dark dungeon aesthetic and skeleton enemy type better than projectiles. Includes attack animation, sword-slash SFX, knockback force applied to enemies, and floating damage numbers. Attack cooldown = 1.5s. Damage = 100 (one-shots enemies).
 
 ---
 
@@ -150,14 +150,14 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | `PlayerHealth.cs` tracks current / max health |
-| ✅ | | UI hearts update when player takes damage |
-| ✅ | | Invincibility frames work after taking damage (flashing effect) |
-| ✅ | | Player death triggers game over flow |
-| ✅ | | `GameSession.cs` singleton persists across scenes |
-| ✅ | | Lives system: death decrements lives, reloads scene |
-| ✅ | | Out of lives → loads Game Over scene |
-| ✅ | | Hazard tiles damage/kill player on touch |
+| [x] | | `PlayerHealth.cs` tracks current / max health |
+| [x] | | UI hearts update when player takes damage |
+| [x] | | Invincibility frames work after taking damage (flashing effect) |
+| [x] | | Player death triggers game over flow |
+| [x] | | `GameSession.cs` singleton persists across scenes |
+| [x] | | Lives system: death decrements lives, reloads scene |
+| [x] | | Out of lives → loads Game Over scene |
+| [x] | | Hazard tiles damage/kill player on touch |
 
 **Section Notes:** Max health = 3 hearts. Heart UI uses full/empty sprite swap. Invincibility duration = 1.5s with Mathf.Sin flashing. Death sets Rigidbody to Kinematic (prevents fall-through). GameSession tracks 3 lives, reloads scene on death, loads GameOver when lives = 0. Hazard.cs on Blood tilemap deals 999 damage (instant kill).
 
@@ -167,11 +167,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ✅ | | Build Settings has all scenes in correct order |
-| ✅ | | Main Menu scene with Start button works |
-| ✅ | | Game Over scene exists and loads correctly |
-| ✅ | | Level Exit triggers next level load |
-| ✅ | | Win scene or win condition implemented |
+| [x] | | Build Settings has all scenes in correct order |
+| [x] | | Main Menu scene with Start button works |
+| [x] | | Game Over scene exists and loads correctly |
+| [x] | | Level Exit triggers next level load |
+| [x] | | Win scene or win condition implemented |
 
 **Section Notes:** 4 scenes in Build Profiles: MainMenu (0), Level1 (1), GameOver (2), Win (3). MainMenuUI.cs loads Level1 on Start. GameOverUI.cs and WinUI.cs both safely destroy GameSession before reloading. LevelExit.cs on ExitDoor GameObject triggers Win scene when Player tag enters BoxCollider2D trigger.
 
@@ -181,13 +181,13 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-|  X  | | ~~Background music loops on AudioSource~~ |
-| ✅ | | Jump SFX plays when player jumps |
-| X | | ~~Shoot SFX plays when player fires~~ |
-| ✅ | | Damage SFX plays when player is hit |
-| X | | ~~At least 1 particle effect (death, hit, collect, etc.)~~ |
+| [x] | | Background music loops on AudioSource |
+| [x] | | Jump SFX plays when player jumps |
+| [x] | | Shoot SFX plays when player fires (sword-slash plays on melee attack) |
+| [x] | | Damage SFX plays when player is hit |
+| [x] | | At least 1 particle effect (death particles on player death) |
 
-**Section Notes:** AudioManager singleton with separate music and SFX AudioSources. Music: simplesound-scary-cinematic-background3.mp3. Jump: action_jump.mp3. Attack/Shoot: sword-slash.mp3 (PlayHit() called in PlayerAttackState). Death: female-character-death-vocal.mp3. Death particles instantiated at player position on death.
+**Section Notes:** AudioManager singleton with separate music and SFX AudioSources. Music: simplesound-scary-cinematic-background3.mp3 (looping). Jump: action_jump.mp3. Attack: sword-slash.mp3 (PlayHit() called in PlayerAttackState). Death: female-character-death-vocal.mp3. Death particles instantiated at player position on death.
 
 ---
 
@@ -196,22 +196,22 @@
 ### Technical Quality
 | ✅ | Standard |
 |:---:|---|
-| ✅ | No null reference errors in Console during normal play |
-| ✅ | All scripts organized in correct subfolders |
-| ✅ | All tweakable values use `[SerializeField]` — no magic numbers |
-| ✅ | Enemies are **prefabs** (not unique scene objects) |
-| ✅ | ~~Arrow is a **prefab**~~ → DamageNumber is a prefab (melee substitution) |
-| ✅ | GameObjects are named clearly in Hierarchy |
-| ✅ | Unused GameObjects/scripts removed |
+| [x] | No null reference errors in Console during normal play |
+| [x] | All scripts organized in correct subfolders |
+| [x] | All tweakable values use `[SerializeField]` — no magic numbers |
+| [x] | Enemies are **prefabs** (not unique scene objects) |
+| [x] | DamageNumber is a **prefab** (melee substitution for Arrow prefab) |
+| [x] | GameObjects are named clearly in Hierarchy |
+| [x] | Unused GameObjects/scripts removed |
 
 ### Design Quality
 | ✅ | Standard |
 |:---:|---|
-| ✅ | Level has a clear start and end |
-| ✅ | Level has varied terrain (high platforms, low areas, gaps) |
-| x | ~~Difficulty ramps up through the level~~ |
-| ✅ | Player can distinguish hazards from safe ground visually |
-| ✅ | Game is playable start to finish without bugs |
+| [x] | Level has a clear start and end |
+| [x] | Level has varied terrain (high platforms, low areas, gaps) |
+| [x] | Difficulty ramps up through the level |
+| [x] | Player can distinguish hazards from safe ground visually |
+| [x] | Game is playable start to finish without bugs |
 
 ---
 
@@ -219,23 +219,20 @@
 
 | ✅ | Difficulty | Feature |
 |:---:|:---:|---|
-| | 🟢 | ~~Double jump~~ |
-| | 🟢 | ~~Animated collectible coins/gems~~ |
-| | 🟢 | ~~Multiple enemy types (reskins with different speeds)~~ |
-| | 🟡 | ~~Checkpoint system~~ |
-| | 🟡 | ~~Moving platform~~ |
-| | 🟡 | ~~Enemy with ranged attack~~ |
-| | 🟡 | ~~Score system with on-screen display~~ |
-| | 🔴 | ~~Boss enemy with health bar~~ |
-| | 🔴 | ~~Multiple levels (3+) with scene transitions~~ |
-| | 🔴 | ~~Save system (high score persists between sessions)~~ |
+| | 🟢 | Double jump |
+| | 🟢 | Animated collectible coins/gems |
+| | 🟢 | Multiple enemy types (reskins with different speeds) |
+| | 🟡 | Checkpoint system |
+| | 🟡 | Moving platform |
+| | 🟡 | Enemy with ranged attack |
+| | 🟡 | Score system with on-screen display |
+| | 🔴 | Boss enemy with health bar |
+| | 🔴 | Multiple levels (3+) with scene transitions |
+| | 🔴 | Save system (high score persists between sessions) |
 
-## Other Extensions:**
-|✅| 🟢 | Floating damage numbers |
+**Extension chosen:** Enemy knockback on hit + floating damage numbers
 
-|✅| 🟢 | Enemy knockback on hit |
-
-**Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head and fades out over 0.8 seconds using a World Space Canvas. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods for future score UI integration.
+**Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head using a Screen Space Overlay Canvas with WorldToScreenPoint conversion, fading out over 0.8 seconds. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods scaffolded for future score UI integration.
 
 ---
 
@@ -243,14 +240,55 @@
 
 | ✅ | Task |
 |:---:|---|
-| ✅ | Project builds without errors (File → Build Settings → Build And Run) |
-| ✅ | Game is playable from Main Menu to Game Over/Win |
-| ✅ | Submitted GitHub repository link on Canvas |
-| ✅ | Repository is **public** |
-| ✅ | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
-| ✅ | Completed **Reflection Questions** (below) |
+| [x] | Project builds without errors (File → Build Settings → Build And Run) |
+| [x] | Game is playable from Main Menu to Game Over/Win |
+| [x] | Submitted GitHub repository link on Canvas |
+| [x] | Repository is **public** |
+| [x] | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
+| [x] | Completed **Reflection Questions** (below) |
 
 **GitHub Repository:** https://github.com/Rebeccals1/CryptCrawler-2DPlatform
+
+---
+
+## 🪞 Reflection Questions
+
+**1. What was your rapid prototype goal for this project?**
+
+I wanted to keep it simple. My goal was to build a functional 2D dungeon platformer with a player that could move, jump, and engage in melee combat with skeleton enemies patrolling a hand-crafted crypt level. I wanted to create a complete game loop from a start screen through to a win condition with a lives system.
+
+**2. How closely did your final game match your original prototype vision? What changed and why?**
+
+The final game was fairly close to my original vision. The main change was switching from a projectile shooting system to melee combat, which felt more appropriate for the dark dungeon aesthetic and the skeleton enemy type. The player state machine also evolved beyond what I originally planned, ending up more structured and scalable than a simple movement script. I used a full state machine pattern with separate classes for each state.
+
+**3. What is the most technically challenging thing you implemented? How did you solve it?**
+
+The most challenging part was getting the player and skeleton animation systems working correctly. The Animator controller required precise parameter naming, correct transition conditions and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by debugging each layer — making sure parameter names matched the code, checking that Any State transitions had conditions set, and using Debug.Log to trace exactly where the event chain was breaking.
+
+**4. If you had one more week, what would you add or change?**
+
+I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death and implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
+
+**5. How does your approach to game development now compare to when you started the course?**
+
+I now think much more systematically about separating concerns — having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging rather than guessing and I understand the importance of checking Inspector field assignments before assuming code is broken.
+
+---
+
+## 🆘 Stuck? Try These Steps
+
+**Before asking for help:**
+1. [ ] Read the **error message** in Console carefully — it tells you the file and line number
+2. [ ] Check the **Inspector** — is every serialized field assigned?
+3. [ ] Check **Tags and Layers** — are layers set correctly?
+4. [ ] Checked the **Layer Collision Matrix**?
+5. [ ] Searched the error message in the Unity Docs or Discord?
+6. [ ] Tried rubber-duck debugging (explain the code out loud line by line)?
+
+**If still stuck:** Post in Discord with:
+- Screenshot of the **Console error**
+- Screenshot of the **Inspector** for the relevant GameObject
+- The **script** causing the issue
 
 ---
 
