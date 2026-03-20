@@ -114,10 +114,3 @@ Assets/
 **If I had one more week:** Add a boss enemy, checkpoint system, and additional enemy types with different behaviors.
 
 ---
-
-## 📋 Submission
-
-- Course: CS 4700 — Game Design Studio
-- Engine: Unity 6
-- Language: C#
-- Docs: `Tutorial.md` | `Checklist.md` | `QuickReference.md`
