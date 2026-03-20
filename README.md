@@ -1,16 +1,12 @@
 # ⚔️ CryptCrawler — 2D Platformer
 
-> A dark dungeon platformer built in Unity 6 with C# | CS 4700: Game Design Studio
-
----
-
-## 🎮 Gameplay Overview
+## Gameplay Overview
 
 CryptCrawler is a 2D side-scrolling platformer set in a dark underground dungeon. The player fights through a crypt filled with patrolling skeleton enemies, deadly blood hazards, and treacherous platforms. Survive long enough to reach the exit door and escape.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Melee combat system** — swing your sword with attack radius detection, cooldown, and knockback
 - **Skeleton enemy AI** — patrols between waypoints, detects ledges, reacts to damage with hit/death animations
@@ -24,7 +20,7 @@ CryptCrawler is a 2D side-scrolling platformer set in a dark underground dungeon
 
 ---
 
-## 🕹️ Controls
+## Controls
 
 | Action | Key |
 |---|---|
@@ -34,7 +30,7 @@ CryptCrawler is a 2D side-scrolling platformer set in a dark underground dungeon
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The player uses a **state machine** pattern with dedicated state classes:
 
@@ -70,7 +66,7 @@ Assets/
 
 ---
 
-## 🧠 Scripts Overview
+## Scripts Overview
 
 | Script | Purpose |
 |---|---|
@@ -89,7 +85,7 @@ Assets/
 
 ---
 
-## 🔧 Built With
+## Built With
 
 - **Unity 6** (2D URP)
 - **C#**
@@ -100,29 +96,8 @@ Assets/
 
 ---
 
-## 🚀 Extension Features Implemented
+## Extension Features Implemented
 
-- ✅ Floating damage numbers above enemies
 - ✅ Enemy knockback on hit
-- ✅ Score system scaffold (GameSession.AddScore)
 
 ---
-
-## 🪞 Reflection
-
-**Prototype goal:** Build a functional 2D dungeon platformer with combat and enemy AI.
-
-**Biggest change from prototype:** Switched from a projectile shooting system to melee combat — felt more appropriate for the dungeon aesthetic and skeleton enemy type. The player state machine also evolved beyond a simple movement script into a fully modular architecture.
-
-**Most challenging thing:** Getting the skeleton animation system working — parameter naming, transition conditions, and event subscriptions all had to align perfectly across multiple scripts.
-
-**If I had one more week:** Add a boss enemy, checkpoint system, and additional enemy types with different behaviors.
-
----
-
-## 📋 Submission
-
-- Course: CS 4700 — Game Design Studio
-- Engine: Unity 6
-- Language: C#
-- Docs: `Tutorial.md` | `Checklist.md` | `QuickReference.md`
