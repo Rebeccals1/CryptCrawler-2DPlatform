@@ -230,9 +230,9 @@
 | | 🔴 | Multiple levels (3+) with scene transitions |
 | | 🔴 | Save system (high score persists between sessions) |
 
-**Extension chosen:** Enemy knockback on hit + floating damage numbers
+### Other Extensions: Enemy knockback on hit + floating damage numbers
 
-**Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head using a Screen Space Overlay Canvas with WorldToScreenPoint conversion, fading out over 0.8 seconds. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods scaffolded for future score UI integration.
+**Brief description of what was added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head using a Screen Space Overlay Canvas with WorldToScreenPoint conversion, fading out over 0.8 seconds. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods scaffolded for future score UI integration.
 
 ---
 
