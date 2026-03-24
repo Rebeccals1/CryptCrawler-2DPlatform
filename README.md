@@ -121,9 +121,7 @@ Level1   → [Exit Door]  → Win      → [Play Again] → Level1
 ```
 
 ### 🎨 Pixel Art Attribution
-Special thanks to the following talented pixel artists whose assets helped bring *Banana Bay Pirates* to life:
-- [SeethingSwarm](https://seethingswarm.itch.io/) — for vibrant and animated sprites
-- [Tom (TVDM1986)](https://tvdm1986.itch.io/) — for detailed environment tiles and objects
+Special thanks to the following talented pixel artists whose assets helped bring *Crypt Crawler* to life:
 - [Anokolisa](https://anokolisa.itch.io/) — for stylish character and effect designs
 We appreciate their incredible work and contributions to the indie game development community.
 <br></br>
