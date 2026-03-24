@@ -106,9 +106,9 @@ Assets/
 
 ## Extension Features Implemented
 
-- ✅ Enemy knockback on hit — force applied in direction away from player, patrol paused 0.2s
-- ✅ Floating damage numbers — screen-space canvas with WorldToScreenPoint conversion
-- ✅ Score system scaffold — GameSession.AddScore() / GetScore() ready for UI integration
+- Enemy knockback on hit — force applied in direction away from player, patrol paused 0.2s
+- Floating damage numbers — screen-space canvas with WorldToScreenPoint conversion
+- Score system scaffold — GameSession.AddScore() / GetScore() ready for UI integration
 
 ---
 
