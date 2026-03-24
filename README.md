@@ -120,6 +120,16 @@ Level1   → [Die × 3]   → GameOver → [Play Again] → Level1
 Level1   → [Exit Door]  → Win      → [Play Again] → Level1
 ```
 
+### 🎨 Pixel Art Attribution
+Special thanks to the following talented pixel artists whose assets helped bring *Banana Bay Pirates* to life:
+- [SeethingSwarm](https://seethingswarm.itch.io/) — for vibrant and animated sprites
+- [Tom (TVDM1986)](https://tvdm1986.itch.io/) — for detailed environment tiles and objects
+- [Anokolisa](https://anokolisa.itch.io/) — for stylish character and effect designs
+We appreciate their incredible work and contributions to the indie game development community.
+<br></br>
+
+## License
+This project is licensed under the [MIT License](LICENSE).
 ---
 
 *CryptCrawler | CS 4700: Game Design Studio | Cal Poly Pomona | March 2026*
