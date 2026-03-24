@@ -121,7 +121,7 @@ Level1   → [Exit Door]  → Win      → [Play Again] → Level1
 ```
 
 ### 🎨 Pixel Art Attribution
-Special thanks to the following talented pixel artists whose assets helped bring *Crypt Crawler* to life:
+Special thanks to the following talented pixel artists whose assets helped bring *CryptCrawler* to life:
 - [Anokolisa](https://anokolisa.itch.io/) — for stylish character and effect designs
 We appreciate their incredible work and contributions to the indie game development community.
 <br></br>
