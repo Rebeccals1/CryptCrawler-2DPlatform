@@ -3,7 +3,7 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     [Header("Attack")]
-    [field: SerializeField] public int Damage { get; private set; } = 4;
+    [field: SerializeField] public int Damage { get; private set; } = 1;
     [field: SerializeField] public float AttackRadius { get; private set; } = 0.5f;
     [field: SerializeField] public Transform AttackPoint { get; private set; }
     [field: SerializeField] public LayerMask EnemyLayer { get; private set; }

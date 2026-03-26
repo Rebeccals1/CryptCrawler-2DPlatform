@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     // ─── Settings ────────────────────────────────────────────────────────
     [Header("Health")]
-    [SerializeField] int maxHealth = 3;
+    [SerializeField] int maxHealth = 4;
     [SerializeField] float invincibilityDuration = 1.5f;
 
     [Header("UI")]
