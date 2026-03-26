@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioClip musicClip; 
 
     [Header("SFX")]
     [SerializeField] AudioSource sfxSource;
@@ -20,8 +21,19 @@ public class AudioManager : MonoBehaviour
         if (Instance != null) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        musicSource.clip = musicClip;
+        musicSource.loop = true;
+        musicSource.Play();
     }
 
+    public void PlayMusic(AudioClip clip)
+    {
+        if (musicSource.clip == clip) return; // already playing
+        musicSource.clip = clip;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
     public void PlayJump()  => sfxSource.PlayOneShot(jumpSFX);
     public void PlayHit()   => sfxSource.PlayOneShot(hitSFX);
     public void PlayDeath() => sfxSource.PlayOneShot(deathSFX);

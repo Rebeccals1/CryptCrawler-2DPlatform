@@ -57234,10 +57234,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.102
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -57332,6 +57332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 893994721}
+  musicClip: {fileID: 8300000, guid: a5086a3b9d414b74d98825f58e54f21c, type: 3}
   sfxSource: {fileID: 893994721}
   jumpSFX: {fileID: 8300000, guid: 4520c81fcacb55949ad9a272d886887b, type: 3}
   hitSFX: {fileID: 8300000, guid: 0c0998324240a4544b39bf79d89d8d72, type: 3}
