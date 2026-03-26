@@ -230,9 +230,9 @@
 | | 🔴 | Multiple levels (3+) with scene transitions |
 | | 🔴 | Save system (high score persists between sessions) |
 
-**Extension chosen:** Enemy knockback on hit + floating damage numbers
+### Other Extensions: Enemy knockback on hit + floating damage numbers
 
-**Brief description of what you added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head using a Screen Space Overlay Canvas with WorldToScreenPoint conversion, fading out over 0.8 seconds. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods scaffolded for future score UI integration.
+**Brief description of what was added:** When the player hits a skeleton, a red damage number floats upward above the enemy's head using a Screen Space Overlay Canvas with WorldToScreenPoint conversion, fading out over 0.8 seconds. Enemies also get knocked back in the direction away from the player, with patrol movement paused for 0.2 seconds to allow the force to register. GameSession.cs includes AddScore() and GetScore() methods scaffolded for future score UI integration.
 
 ---
 
@@ -263,15 +263,15 @@ The final game was fairly close to my original vision. The main change was switc
 
 **3. What is the most technically challenging thing you implemented? How did you solve it?**
 
-The most challenging part was getting the player and skeleton animation systems working correctly. The Animator controller required precise parameter naming, correct transition conditions and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by debugging each layer — making sure parameter names matched the code, checking that Any State transitions had conditions set, and using Debug.Log to trace exactly where the event chain was breaking.
+I spent A LOT of time on the tile maps. Also getting the player and skeleton animation systems working correctly. The Animator controller required precise parameter naming, correct transition conditions and proper C# event subscriptions across multiple scripts (Health, Enemy, EnemyPatrol). I solved it by debugging each layer. I had to make sure the parameter names matched the code, check to make sure any State transitions had conditions set and using Debug.Log to trace exactly where the event chain was breaking.
 
 **4. If you had one more week, what would you add or change?**
 
-I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death and implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
+I would add a proper boss enemy with a health bar UI, since I already have door/gate tiles that could serve as a boss room entrance. I would also add a checkpoint system so players don't restart the full level on death and maybe implement the score UI that is already scaffolded in GameSession.cs. Additional enemy types with different speeds and behaviors would also add more variety.
 
 **5. How does your approach to game development now compare to when you started the course?**
 
-I now think much more systematically about separating concerns — having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging rather than guessing and I understand the importance of checking Inspector field assignments before assuming code is broken.
+I now think much more systematically about separating concerns. Like having dedicated scripts for health, patrol, combat, and state rather than putting everything in one place. I also have a much better understanding of how Unity's Animator controller works and how to wire C# events to drive both gameplay logic and visual feedback cleanly. I'm more comfortable debugging rather than guessing and I understand the importance of checking Inspector field assignments before assuming code is broken.
 
 ---
 

@@ -106,9 +106,9 @@ Assets/
 
 ## Extension Features Implemented
 
-- ✅ Enemy knockback on hit — force applied in direction away from player, patrol paused 0.2s
-- ✅ Floating damage numbers — screen-space canvas with WorldToScreenPoint conversion
-- ✅ Score system scaffold — GameSession.AddScore() / GetScore() ready for UI integration
+- Enemy knockback on hit — force applied in direction away from player, patrol paused 0.2s
+- Floating damage numbers — screen-space canvas with WorldToScreenPoint conversion
+- Score system scaffold — GameSession.AddScore() / GetScore() ready for UI integration
 
 ---
 
@@ -119,6 +119,18 @@ MainMenu → [Start] → Level1
 Level1   → [Die × 3]   → GameOver → [Play Again] → Level1
 Level1   → [Exit Door]  → Win      → [Play Again] → Level1
 ```
+
+
+### Pixel Art Attribution
+Special thanks to the following talented pixel artists whose assets helped bring *CryptCrawler* to life:
+- [Anokolisa](https://anokolisa.itch.io/) — for stylish character and environment design.
+
+We appreciate their incredible work and contributions to the indie game development community.
+<br></br>
+
+
+## License
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
